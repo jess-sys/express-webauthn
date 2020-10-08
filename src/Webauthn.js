@@ -264,8 +264,9 @@ class Webauthn {
           result = Webauthn.verifyAuthenticatorAssertionResponse(response, user.authenticator, this.config.enableLogging)
 
           if (result.verified) {
-            if (result.counter <= user.authenticator.counter)
-              throw new Error('Authr counter did not increase!')
+            // pikalov
+            //if (result.counter <= user.authenticator.counter)
+            //  throw new Error('Authr counter did not increase!')
 
             user.authenticator.counter = result.counter
             await this.store.put(username, user)
