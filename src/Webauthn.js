@@ -285,6 +285,8 @@ class Webauthn {
         req.session.loggedIn = true
 
         // pikalov
+        console.log('pikalov', 1)
+        console.log('pikalov this.config.dontSendResponse', this.config.dontSendResponse)
         if (this.config.dontSendResponse) {
             // it's caller responsibility to send response
             req.result = result
