@@ -285,12 +285,10 @@ class Webauthn {
         req.session.loggedIn = true
 
         // pikalov
-        console.log('pikalov', 1)
-        console.log('pikalov this.config.dontSendResponse', this.config.dontSendResponse)
-        if (this.config.dontSendResponse) {
+        if (this.config.useCustomResponseHandler) {
             // it's caller responsibility to send response
             req.result = result
-            return
+            return next()
         }
         return res.status(200).json({ status: 'ok' })
 
