@@ -287,7 +287,7 @@ class Webauthn {
         // pikalov
         if (this.config.useCustomResponseHandler) {
             // it's caller responsibility to send response
-            req.result = result
+            req.webauthnUser = user
             return next()
         }
         return res.status(200).json({ status: 'ok' })
