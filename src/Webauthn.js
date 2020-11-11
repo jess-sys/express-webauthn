@@ -265,8 +265,8 @@ class Webauthn {
 
           if (result.verified) {
             // pikalov
-            //if (result.counter <= user.authenticator.counter)
-            //  throw new Error('Authr counter did not increase!')
+            if (result.counter <= user.authenticator.counter)
+              throw new Error('Authr counter did not increase!')
 
             user.authenticator.counter = result.counter
             await this.store.put(username, user)
@@ -285,11 +285,11 @@ class Webauthn {
         req.session.loggedIn = true
 
         // pikalov
-        if (this.config.useCustomResponseHandler) {
-            // it's caller responsibility to send response
-            req.webauthnUser = user
-            return next()
-        }
+        //if (this.config.useCustomResponseHandler) {
+        //    // it's caller responsibility to send response
+        //    req.webauthnUser = user
+        //    return next()
+        //}
         return res.status(200).json({ status: 'ok' })
 
       } else {
