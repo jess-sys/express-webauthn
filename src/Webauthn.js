@@ -265,8 +265,8 @@ class Webauthn {
 
           if (result.verified) {
             // pikalov
-            if (result.counter <= user.authenticator.counter)
-              throw new Error('Authr counter did not increase!')
+            //if (result.counter <= user.authenticator.counter)
+            //  throw new Error('Authr counter did not increase!')
 
             user.authenticator.counter = result.counter
             await this.store.put(username, user)
