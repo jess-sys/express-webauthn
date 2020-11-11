@@ -283,13 +283,6 @@ class Webauthn {
 
       if (result.verified) {
         req.session.loggedIn = true
-
-        // pikalov
-        //if (this.config.useCustomResponseHandler) {
-        //    // it's caller responsibility to send response
-        //    req.webauthnUser = user
-        //    return next()
-        //}
         return res.status(200).json({ status: 'ok' })
 
       } else {
