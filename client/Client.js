@@ -68,6 +68,8 @@ class Client {
   static preformatMakeCredReq (makeCredReq) {
     makeCredReq.challenge = base64url.decode(makeCredReq.challenge)
     makeCredReq.user.id = base64url.decode(makeCredReq.user.id)
+    // pikalov: IOS doesn't show displayName, but name
+    makeCredReq.user.name = makeCredReq.user.displayName
     return makeCredReq
   }
 
