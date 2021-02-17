@@ -160,9 +160,12 @@ class AttestationChallengeBuilder {
       throw new Error(`Invalid AuthenticatorAttachment value. Must be one of "${values.join('", "')}".`)
     }
 
-    this.result.authenticatorSelection = {
-      ...authenticatorSelection,
-      authenticatorAttachment,
+    // pikalov
+    if (authenticatorAttachment != Dictionaries.AuthenticatorAttachment.UNSPECIFIED) {
+      this.result.authenticatorSelection = {
+        ...authenticatorSelection,
+        authenticatorAttachment,
+      }
     }
 
     return this

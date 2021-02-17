@@ -22,6 +22,8 @@ const Dictionaries = {
   AuthenticatorAttachment: {
     PLATFORM: 'platform',
     CROSS_PLATFORM: 'cross-platform',
+    // pikalov
+    UNSPECIFIED: 'unspecified',
   },
 
   /**
