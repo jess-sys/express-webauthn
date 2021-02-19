@@ -27,8 +27,8 @@ const Dictionaries = require('./Dictionaries')
 class Webauthn {
   constructor (options = {}) {
     this.config = Object.assign({
-      //pikalov
-      origin: ['http://localhost:3000'],
+      //pikalov, e.g ['http://localhost:3000']
+      origins: [],
       usernameField: 'name',
       userFields: ['name', 'displayName'],
       store: new MemoryAdapter(),
@@ -237,10 +237,12 @@ class Webauthn {
       if (!challenge || challenge !== req.session.challenge) {
         return res.status(400).json({ message: 'mismatched challenge' })
       }
-      
+
       // pikalov
-      if (!origin || !this.config.origin.includes(origin)) {
-        return res.status(400).json({ message: 'mismatched origin' })
+      if (this.config.origins.length != 0) {
+        if (!origin || !this.config.origins.includes(origin)) {
+          return res.status(400).json({ message: 'mismatched origin' })
+        }
       }
 
       const username = req.session[usernameField]
