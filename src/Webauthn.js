@@ -122,6 +122,10 @@ class Webauthn {
         .setUserInfo(user)
         .setAttestationType(this.config.attestation)
         .setAuthenticator(this.config.authenticator)
+        // pikalov
+        .setUserVerification(Dictionaries.UserVerificationRequirement.DISCOURAGED)
+        // pikalov
+        .setResidentKeyRequired(false)
         .setRelyingPartyInfo({ name: this.config.rpName || options.rpName })
         .build({ status: 'ok' })
 
