@@ -261,5 +261,7 @@ Forked from [dpikalov/webauthn](https://github.com/dpikalov/webauthn).
 ## License
 
 MIT © 2019 Stranger Labs, Inc.
+
 MIT © 2020 dpikalov
+
 MIT © 2021 Jessy SOBREIRO
