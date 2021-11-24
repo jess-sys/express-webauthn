@@ -1,8 +1,8 @@
-# WebAuthn
+# WebAuthn Toolset
 
-> W3C Web Authentication API Relying Party for Node.js and Express
+> WebAuthn Relying Party API for NodeJS and Express.
 
-This is project is maintained. Feel free to make PRs, they will be reviewed and accepted.
+This is project is maintained (but we are looking for maintainers). Feel free to make PRs, they will be reviewed and accepted.
 
 Forked from https://github.com/dpikalov/webauthn.
 
