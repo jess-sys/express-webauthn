@@ -1,10 +1,10 @@
 # WebAuthn
 
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![build-status](https://travis-ci.com/strangerlabs/webauthn.svg?branch=master)](https://travis-ci.com/strangerlabs/webauthn)
-[![codecov](https://codecov.io/gh/strangerlabs/webauthn/branch/master/graph/badge.svg)](https://codecov.io/gh/strangerlabs/webauthn)
-
 > W3C Web Authentication API Relying Party for Node.js and Express
+
+This is project is maintained. Feel free to make PRs, they will be reviewed and accepted.
+
+Forked from https://github.com/dpikalov/webauthn.
 
 WebAuthn is a [W3C standard][w3c] that enables web developers to replace passwords in their applications with [FIDO authentication][fido2]. This repository implements a NPM package for use in Node.js services. **This package is in active development and not yet ready for production use. You can use it to kick the tires on WebAuthn. Please file issues to ask questions or provide feedback.**
 
