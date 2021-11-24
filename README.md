@@ -2,7 +2,9 @@
 
 > WebAuthn Relying Party API for NodeJS and Express.
 
-This is project is maintained (but we are looking for maintainers). Feel free to make PRs, they will be reviewed and accepted.
+This is project is maintained (but we are looking for maintainers). TypeScript support is coming.
+
+Feel free to make PRs, they will be reviewed and accepted.
 
 Forked from https://github.com/dpikalov/webauthn.
 
@@ -16,7 +18,6 @@ WebAuthn is a [W3C standard][w3c] that enables web developers to replace passwor
 - [WebAuthn](#webauthn)
   - [Table of Contents](#table-of-contents)
   - [Security](#security)
-  - [Install](#install)
   - [Usage](#usage)
   - [API](#api)
     - [Relying Party](#relying-party)
@@ -39,12 +40,6 @@ This package is not yet ready for use in production software. For more informati
 
 [w3c-sec]: https://w3c.github.io/webauthn/#security-considerations
 [fido-sec]: https://fidoalliance.org/specs/fido-v2.0-rd-20180702/fido-security-ref-v2.0-rd-20180702.html
-
-## Install
-
-```sh
-$ npm install webauthn
-```
 
 ## Usage
 
@@ -237,19 +232,15 @@ request to the `logoutEndpoint`.
 
 ## Maintainers
 
-[@Terrahop](https://github.com/Terrahop)
+[@jess-sys](https://github.com/jess-sys)
 
-[@EternalDeiwos](https://github.com/EternalDeiwos)
-
-[@christiansmith](https://github.com/christiansmith)
-
-Originally adapted from [fidoalliance/webauthn-demo](https://github.com/fido-alliance/webauthn-demo).
+Forked from [dpikalov/webauthn](https://github.com/dpikalov/webauthn).
 
 ## Contributing
 
 ### Issues
 
-* Please file [issues](https://github.com/strangerlabs/webauthn/issues) :)
+* Please file [issues](https://github.com/jess-sys/webauthn-toolset/issues) :)
 * When writing a bug report, include relevant details such as platform, version, relevant data, and stack traces
 * Ensure to check for existing issues before opening new ones
 * Read the documentation before asking questions
@@ -259,9 +250,7 @@ Originally adapted from [fidoalliance/webauthn-demo](https://github.com/fido-all
 
 #### Policy
 
-* We're not presently accepting *unsolicited* pull requests
-* Create an issue to discuss proposed features before submitting a pull request
-* Create an issue to propose changes of code style or introduce new tooling
+* We **are** accepting PRs.
 * Ensure your work is harmonious with the overall direction of the project
 * Ensure your work does not duplicate existing effort
 * Keep the scope compact; avoid PRs with more than one feature or fix
@@ -269,27 +258,8 @@ Originally adapted from [fidoalliance/webauthn-demo](https://github.com/fido-all
 * New code must respect the style guide and overall architecture of the project
 * Be prepared to defend your work
 
-#### Style guide
-
-* [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog)
-* [ECMAScript](https://tc39.github.io/ecma262/)
-* [Standard JavaScript](https://standardjs.com)
-* [Standard README](https://github.com/RichardLitt/standard-readme)
-* [jsdoc](https://jsdoc.app)
-
-#### Code reviews
-
-* required before merging PRs
-* reviewers MUST run and test the code under review
-
-### Tests
-
-Run the test suite with `npm test`.
-
-### Code of conduct
-
-* @strangerlabs/webauthn follows the [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) Code of Conduct.
-
 ## License
 
 MIT © 2019 Stranger Labs, Inc.
+MIT © 2020 dpikalov
+MIT © 2021 Jessy SOBREIRO
